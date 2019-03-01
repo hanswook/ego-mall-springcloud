@@ -7,6 +7,7 @@ import com.ego.pojo.*;
 import com.ego.pojo.entity.EasyUIDataGrid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;

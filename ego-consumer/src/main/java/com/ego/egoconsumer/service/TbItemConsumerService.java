@@ -62,6 +62,15 @@ public interface TbItemConsumerService {
     @RequestMapping(value = "rest/content/category/selById", method = RequestMethod.GET)
     TbContentCategory selById(@RequestParam(value = "id") long id);
 
+    @RequestMapping(value = "rest/content/category/update", method = RequestMethod.POST)
+    int updateCategory(@RequestBody TbContentCategory category);
+
+    @RequestMapping(value = "rest/content/searchByCid", method = RequestMethod.GET)
+    List<TbContent> searchByCid(@RequestParam(value = "cid") long cid, @RequestParam(value = "page") int page, @RequestParam(value = "rows") int rows);
+
+    @RequestMapping(value = "rest/content/create", method = RequestMethod.POST)
+    int insertTbContent(@RequestBody TbContent tbContent);
+
 }
 
 

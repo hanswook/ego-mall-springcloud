@@ -55,13 +55,19 @@ public class TbContentCategoryController {
         return 0;
     }
 
+
+    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    public int update(@RequestBody TbContentCategory category) {
+        Date date=new Date();
+        category.setUpdated(date);
+        return tbContentCategoryService.updIsParentById(category);
+    }
+
+
     @RequestMapping(value = "/selById", method = RequestMethod.GET)
     public TbContentCategory selById(long id) {
         return tbContentCategoryService.selById(id);
     }
-
-
-
 
 
 }

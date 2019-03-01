@@ -83,4 +83,20 @@ public class TbItemConsumerServiceHystric implements TbItemConsumerService {
     public TbContentCategory selById(long id) {
         return null;
     }
+
+    @Override
+    public int updateCategory(TbContentCategory category) {
+        return 0;
+    }
+
+
+    @Override
+    public List<TbContent> searchByCid(long cid, int page, int rows) {
+        return null;
+    }
+
+    @Override
+    public int insertTbContent(TbContent tbContent) {
+        return 0;
+    }
 }

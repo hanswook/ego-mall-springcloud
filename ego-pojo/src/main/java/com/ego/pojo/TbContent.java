@@ -1,5 +1,7 @@
 package com.ego.pojo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -46,8 +48,10 @@ public class TbContent {
      */
     private String pic2;
 
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date created;
 
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date updated;
 
     /**
